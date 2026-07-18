@@ -1,0 +1,91 @@
+.article-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.article-tree__group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.article-tree__category {
+  font-size: 20px;
+  color: var(--text-h);
+  margin: 8px 0 0;
+}
+
+.article-tree__category-desc {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ---- cards variant ---- */
+.article-tree--cards .article-tree__card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  text-decoration: none;
+  color: var(--text-h);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.article-tree--cards .article-tree__card:hover,
+.article-tree--cards .article-tree__card:focus-visible {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: rgba(0, 0, 0, 0.12) 0 16px 24px -10px;
+}
+
+.article-tree--cards .article-tree__card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.article-tree__card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.article-tree__card-summary {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ---- compact variant (ハンバーガーメニュー内) ---- */
+.article-tree--compact {
+  gap: 8px;
+}
+
+.article-tree--compact .article-tree__category {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.article-tree__link {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-h);
+  transition: background-color 140ms ease;
+}
+
+.article-tree__link:hover,
+.article-tree__link:focus-visible {
+  background: var(--accent-bg);
+  color: var(--accent);
+}

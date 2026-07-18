@@ -1,35 +1,42 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
+import { ArticleTree } from './ArticleTree';
+import { contentTree } from '../content/tree';
 import './Header.css';
-
-const MENU_ITEMS = ['メニュー1', 'メニュー2', 'メニュー3'];
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuId = 'site-navigation';
+  const close = () => setIsOpen(false);
 
   return (
     <header className="site-header">
-      <img className="site-header__logo" src={logo} alt="ロゴ" />
-      <button 
+      <Link className="site-header__logo-link" to="/" onClick={close}>
+        <img className="site-header__logo" src={logo} alt="ドーナツショップ つきの。" />
+      </Link>
+      <button
         type="button"
         className="site-header__toggle"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-controls={menuId}
+        aria-label="メニューを開閉"
       >
         ≡
       </button>
 
       {isOpen && (
         <nav id={menuId} className="site-header__menu" aria-label="サイトメニュー">
-          <ul className="site-header__menu-list">
-            {MENU_ITEMS.map((item) => (
-              <li key={item} className="site-header__menu-item">
-                {item}
-              </li>
-            ))}
-          </ul>
+          <Link className="site-header__menu-primary" to="/" onClick={close}>
+            ホーム
+          </Link>
+          <Link className="site-header__menu-primary" to="/collection" onClick={close}>
+            コレクション図鑑
+          </Link>
+          <div className="site-header__menu-divider" />
+          <p className="site-header__menu-heading">記事一覧</p>
+          <ArticleTree nodes={contentTree} variant="compact" onNavigate={close} />
         </nav>
       )}
     </header>

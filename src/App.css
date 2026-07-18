@@ -6,13 +6,14 @@
   background-image: var(--app-background-image);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   transition: opacity 0.5s ease;
   opacity: 1;
 }
 
 .app-shell::before {
   content: '';
-  position: absolute;
+  position: fixed;
   inset: 0;
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.18), transparent 36%),
@@ -29,11 +30,6 @@
   align-items: center;
   gap: 40px;
   padding: 32px 24px 72px;
-}
-
-.app-main--article {
-  align-items: stretch;
-  justify-content: center;
 }
 
 .hero-section {
@@ -73,47 +69,6 @@
 }
 
 .hero-link:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-.article-page {
-  width: min(100%, 920px);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.article-page__back {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: var(--shadow);
-  color: var(--text-h);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  backdrop-filter: blur(14px);
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    background-color 180ms ease;
-}
-
-.article-page__back:hover,
-.article-page__back:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: rgba(0, 0, 0, 0.12) 0 14px 20px -8px;
-  background: rgba(255, 255, 255, 0.88);
-}
-
-.article-page__back:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
