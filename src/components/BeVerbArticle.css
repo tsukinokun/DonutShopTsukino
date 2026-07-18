@@ -1,0 +1,152 @@
+.be-verb-article {
+  position: relative;
+  width: min(100%, 920px);
+  padding: 34px;
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 248, 242, 0.68)),
+    rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  color: var(--text-h);
+  text-align: left;
+  overflow: hidden;
+}
+
+.be-verb-article::before {
+  content: '';
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 203, 219, 0.32), transparent 68%);
+  pointer-events: none;
+}
+
+.be-verb-article::after {
+  content: '';
+  position: absolute;
+  right: -12%;
+  bottom: -18%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(170, 59, 255, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.be-verb-article__eyebrow {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.be-verb-article__title {
+  position: relative;
+  z-index: 1;
+  margin: 18px 0 12px;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.be-verb-article__lead,
+.be-verb-article__section p,
+.be-verb-card__note,
+.be-verb-article__list {
+  position: relative;
+  z-index: 1;
+}
+
+.be-verb-article__lead {
+  max-width: 66ch;
+  margin-bottom: 28px;
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.be-verb-article__cards {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.be-verb-card {
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 20px rgba(79, 34, 104, 0.06);
+}
+
+.be-verb-card__label {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.be-verb-card__form {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.be-verb-card__note {
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.be-verb-article__section {
+  position: relative;
+  z-index: 1;
+  padding-top: 10px;
+}
+
+.be-verb-article__section + .be-verb-article__section {
+  margin-top: 22px;
+}
+
+.be-verb-article__section-title {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.be-verb-article__list {
+  padding-left: 1.2em;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+.be-verb-article__list li + li {
+  margin-top: 8px;
+}
+
+.be-verb-article__section--soft {
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 900px) {
+  .be-verb-article {
+    padding: 26px;
+    border-radius: 26px;
+  }
+
+  .be-verb-article__cards {
+    grid-template-columns: 1fr;
+  }
+}
