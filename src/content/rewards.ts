@@ -34,6 +34,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '命令系の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-auxiliary',
+    name: '助動詞ドーナツ',
+    icon: logo,
+    description: '助動詞の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {

@@ -457,6 +457,115 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-auxiliary',
+        slug: 'auxiliary-verb',
+        title: '助動詞',
+        summary: '「できる」「〜だろう」「しなければ」を添える、動詞のお手伝いさん。',
+        rewardId: 'reward-auxiliary',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '助動詞は、動詞の「気持ち」をちょっと足してくれるお手伝いさんです。「できる」「〜だろう」「しなければ」のようなニュアンスを、あとからそっと添えます。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '助動詞のルールはシンプルです。主語の形にかかわらず助動詞はそのまま、うしろの動詞はいつも原形です。まずはよく出る助動詞を表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['助動詞', '意味', '例', '使い方'],
+              rows: [
+                ['can', 'できる', 'I can bake.', '能力や「してもいい」。'],
+                ['will', '〜だろう', 'I will help.', 'これからすること（意志・予測）。'],
+                ['must', '〜しなければならない', 'You must wait.', '強い義務。'],
+                ['should', '〜するほうがいい', 'You should rest.', 'やさしいすすめ。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '形のポイント',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '助動詞のうしろはいつも原形（bake / help / wait など）。',
+                '三人称単数でも -s はつかない：He can bake.',
+                '否定・疑問は助動詞に not をつけたり、助動詞を前に出すだけ。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（自分）' },
+            { type: 'example', en: 'I can bake donuts.', ja: 'わたしはドーナツを焼けます。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（お客さんへ）' },
+            { type: 'example', en: 'You should try one.', ja: 'あなたは一つ食べてみるといいですよ。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（約束）' },
+            { type: 'example', en: 'I will open the shop.', ja: 'わたしがお店を開けます。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '助動詞は動詞の気持ち（できる・〜だろう など）を添える。',
+                'うしろの動詞はいつも原形。',
+                'can / will / must / should の使い分けをおぼえる。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「わたしは焼けます」を英訳すると？',
+              choices: ['I can bakes.', 'I can bake.', 'I cans bake.', 'I baking.'],
+              answerIndex: 1,
+              explanation: '助動詞 can のうしろは原形 bake です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'He ___ swim. の空欄に入るのは？',
+              choices: ['can', 'cans', 'canning', 'is can'],
+              answerIndex: 0,
+              explanation: '三人称単数でも助動詞は can のまま、-s はつきません。',
+            },
+            {
+              id: 'q3',
+              prompt: '「あなたは休むほうがいい」を英訳すると？',
+              choices: ['You must rest.', 'You should rest.', 'You can rest.', 'You will rest.'],
+              answerIndex: 1,
+              explanation: 'やさしいすすめには should を使います。',
+            },
+            {
+              id: 'q4',
+              prompt: '「しなければならない」を表す助動詞は？',
+              choices: ['will', 'can', 'must', 'should'],
+              answerIndex: 2,
+              explanation: '強い義務は must です。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
