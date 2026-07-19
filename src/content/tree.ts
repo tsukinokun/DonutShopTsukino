@@ -140,27 +140,22 @@ export const contentTree: ContentNode[] = [
           concept: [
             {
               type: 'text',
-              text: 'Be動詞は主語によって形が変わります。まずは形の一覧を見てみましょう。',
-            },
-            {
-              type: 'cards',
-              cards: [
-                { label: '現在形', title: 'am / is / are', note: '主語によって形が変わります。' },
-                { label: '過去形', title: 'was / were', note: '「前は〜だった」をやさしく受け持ちます。' },
-                { label: '基本の役目', title: 'つなぐ・言い切る', note: '名詞や形容詞、場所と気持ちをふんわり結びます。' },
-              ],
+              text: 'Be動詞は主語（誰について話しているか）によって形が変わります。まずは、人称代名詞との対応を表でおぼえましょう。',
             },
             {
               type: 'heading',
-              text: 'こんなときに使います',
+              text: '主語とBe動詞の対応表',
               level: 2,
             },
             {
-              type: 'list',
-              items: [
-                'I am a student. のように、名詞を結ぶ。',
-                'She is happy. のように、気持ちや性質を伝える。',
-                'We are in the garden. のように、場所を示す。',
+              type: 'table',
+              headers: ['主語（人称代名詞）', '現在形', '意味・使い方'],
+              rows: [
+                ['I（私）', 'am', '話し手自身について話す'],
+                ['you（あなた）', 'are', '聞き手（単数・複数どちらも）'],
+                ['he（彼） / she（彼女） / it（それ）', 'is', '三人称単数'],
+                ['we（私たち）', 'are', '話し手を含む複数'],
+                ['they（彼ら）', 'are', '複数（人・物とも）'],
               ],
             },
           ],
@@ -169,10 +164,12 @@ export const contentTree: ContentNode[] = [
               type: 'text',
               text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
             },
-            { type: 'example', en: 'I am a student.', ja: 'わたしは学生です。', speakable: true },
-            { type: 'example', en: 'She is happy.', ja: '彼女はうれしい。', speakable: true },
-            { type: 'example', en: 'We are in the garden.', ja: 'わたしたちは庭にいます。', speakable: true },
-            { type: 'example', en: 'He was a teacher.', ja: '彼は先生でした。', speakable: true },
+            { type: 'text', text: 'I（自分）' },
+            { type: 'example', en: 'I am a baker.', ja: 'わたしはパン職人です。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'She（彼女）' },
+            { type: 'example', en: 'She is sweet.', ja: '彼女は甘いですよ。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'We（私たち）' },
+            { type: 'example', en: 'We are in the shop.', ja: 'わたしたちは店にいます。', speakable: true, speaker: 'tsukino' },
           ],
           quiz: [
             {
@@ -183,13 +180,13 @@ export const contentTree: ContentNode[] = [
           summary: [
             {
               type: 'text',
-              text: 'まずは「主語によって am / is / are が変わる」とだけつかんでおくと十分です。形を丸ごと暗記するより、文の中で“つなぐお仕事”をしていると見るとやわらかく覚えられます。',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
             },
             {
-              type: 'passage',
-              lines: [
-                { speakerId: 'guest', text: 'なんだか、ちょっと仲よくなれた気がする。' },
-                { speakerId: 'tsukino', text: 'その調子。またドーナツ、焼いて待ってるね。' },
+              type: 'list',
+              items: [
+                'Be動詞は主語によって形が変わる：I am / you are / he・she・it is / we・they are。',
+                '名詞・形容詞・場所をつなぐ“つなぐお仕事”をする。',
               ],
             },
           ],
@@ -216,13 +213,6 @@ export const contentTree: ContentNode[] = [
               choices: ['am', 'is', 'are', 'was'],
               answerIndex: 2,
               explanation: '主語が We（複数）のときは are を使います。',
-            },
-            {
-              id: 'q4',
-              prompt: 'He ___ a teacher.（過去） の空欄に入るのは？',
-              choices: ['is', 'are', 'was', 'were'],
-              answerIndex: 2,
-              explanation: '主語が He の過去形は was です。',
             },
           ],
         },
