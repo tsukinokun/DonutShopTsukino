@@ -217,6 +217,138 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-general-verb',
+        slug: 'general-verb',
+        title: '一般動詞',
+        summary: '「〜する」を表す主役、一般動詞のはなし。ドーナツを焼いたり、客さんを呼んだり。',
+        rewardId: 'reward-general-verb',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '一般動詞は「〜する」「動く」「働く」の気配を受け持つ主役です。Be動詞が“つなぐ”なら、一般動詞は“はっきり動く”お仕事をします。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '一般動詞は主語によって形が少し変わります。一番大切なのは「三人称単数（he・she・it）のときだけ、語尾に -s がつく」というルールです。まずは対応表でおぼえましょう。',
+            },
+            {
+              type: 'heading',
+              text: '主語と一般動詞の対応表',
+              level: 2,
+            },
+            {
+              type: 'table',
+              headers: ['主語（人称代名詞）', '動詞の形', '意味・使い方'],
+              rows: [
+                ['I（私）', 'make', '話し手自身がする'],
+                ['you（あなた）', 'make', '聞き手がする'],
+                ['he / she / it', 'makes', '三人称単数には -s がつく'],
+                ['we（私たち）', 'make', '話し手を含む複数がする'],
+                ['they（彼ら）', 'make', '複数がする'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '否定・疑問は do / does と仲よし',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'I make donuts. のように、そのまま動詞を置く。',
+                '否定や疑問のときは、do / does を手伝いに呼ぶ（動詞本体は原形に戻る）。',
+                '三人称単数には does を使う：She makes → Does she make?',
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'よく出る単語',
+              level: 2,
+            },
+            {
+              type: 'table',
+              headers: ['単語', '意味', '使い方'],
+              rows: [
+                ['make', '作る', 'ドーナツを作るときの主役の動詞。'],
+                ['sell', '売る', '店頭でお客さんに渡すとき。'],
+                ['open', '開ける', 'お店のシャッターを開ける。'],
+                ['buy', '買う', 'お客さんがドーナツを買う。'],
+                ['eat', '食べる', 'できたてをぱくっと。'],
+                ['like', '好きである', '「I like donuts.」でよく登場。'],
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'I（自分）' },
+            { type: 'example', en: 'I make donuts.', ja: 'わたしはドーナツを作ります。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'She（彼女）' },
+            { type: 'example', en: 'She sells donuts.', ja: '彼女はドーナツを売ります。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'We（私たち）' },
+            { type: 'example', en: 'We open the shop.', ja: 'わたしたちは店を開けます。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '一般動詞は「〜する」を表す。',
+                '三人称単数（he・she・it）のときだけ動詞に -s がつく。',
+                '否定・疑問は do / does を手伝いに呼ぶ。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: 'I ___ donuts. の空欄に入るのは？',
+              choices: ['make', 'makes', 'making', 'made'],
+              answerIndex: 0,
+              explanation: '主語が I のときは原形 make を使います。',
+            },
+            {
+              id: 'q2',
+              prompt: 'She ___ donuts. の空欄に入るのは？',
+              choices: ['make', 'makes', 'making', 'did'],
+              answerIndex: 1,
+              explanation: '主語が三人称単数（She）のときは makes と -s がつきます。',
+            },
+            {
+              id: 'q3',
+              prompt: 'They ___ the shop. の空欄に入るのは？',
+              choices: ['open', 'opens', 'opening', 'opened'],
+              answerIndex: 0,
+              explanation: '主語が They（複数）のときは原形 open を使います。',
+            },
+            {
+              id: 'q4',
+              prompt: 'He makes donuts. を疑問文にすると？',
+              choices: ['Do he make donuts?', 'Does he make donuts?', 'Is he make donuts?', 'He do make donuts?'],
+              answerIndex: 1,
+              explanation: '三人称単数には Does を使い、動詞は原形 make に戻ります。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

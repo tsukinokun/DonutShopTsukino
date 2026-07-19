@@ -3,6 +3,7 @@ import type { Block } from '../../content/types';
 import { ExampleBlock } from './ExampleBlock';
 import { PassageBlock } from './PassageBlock';
 import { CardsBlock } from './CardsBlock';
+import { VocabBlock } from './VocabBlock';
 
 interface BlockRendererProps {
   blocks: Block[];
@@ -42,6 +43,8 @@ export const BlockRenderer = ({ blocks }: BlockRendererProps) => {
             );
           case 'cards':
             return <CardsBlock cards={block.cards} key={index} />;
+          case 'vocab':
+            return <VocabBlock words={block.words} key={index} />;
           case 'example':
             return (
               <ExampleBlock en={block.en} ja={block.ja} speakable={block.speakable} speaker={block.speaker} key={index} />

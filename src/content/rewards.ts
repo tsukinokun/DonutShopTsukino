@@ -22,6 +22,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: 'Be動詞の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-general-verb',
+    name: '一般動詞ドーナツ',
+    icon: logo,
+    description: '一般動詞の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {
