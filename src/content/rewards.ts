@@ -11,6 +11,12 @@ export const RANK_LABEL: Record<RewardRank, string> = {
 // 各記事の rewardId と対応するコレクション定義。
 export const rewards: RewardDef[] = [
   {
+    id: 'reward-pronoun',
+    name: '代名詞ドーナツ',
+    icon: logo,
+    description: '代名詞の確認テストで手に入る、まあるいドーナツ。',
+  },
+  {
     id: 'reward-be-verb',
     name: 'Be動詞ドーナツ',
     icon: logo,

@@ -21,18 +21,23 @@ export const ArticleTree = ({
         if (node.kind === 'category') {
           return (
             <section className="article-tree__group" key={node.id}>
-              <h2 className="article-tree__category" style={{ marginLeft: depth * 12 }}>
-                {node.title}
-              </h2>
-              {node.description && variant === 'cards' && (
-                <p className="article-tree__category-desc">{node.description}</p>
-              )}
-              <ArticleTree
-                nodes={node.children}
-                depth={depth + 1}
-                variant={variant}
-                onNavigate={onNavigate}
-              />
+              <div
+                className="article-tree__category-panel"
+                style={{ marginLeft: depth * 12 }}
+              >
+                <div className="article-tree__category-head">
+                  <h2 className="article-tree__category">{node.title}</h2>
+                  {node.description && variant === 'cards' && (
+                    <p className="article-tree__category-desc">{node.description}</p>
+                  )}
+                </div>
+                <ArticleTree
+                  nodes={node.children}
+                  depth={depth + 1}
+                  variant={variant}
+                  onNavigate={onNavigate}
+                />
+              </div>
             </section>
           );
         }

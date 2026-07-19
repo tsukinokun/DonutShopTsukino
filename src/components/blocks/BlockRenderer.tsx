@@ -44,7 +44,30 @@ export const BlockRenderer = ({ blocks }: BlockRendererProps) => {
             return <CardsBlock cards={block.cards} key={index} />;
           case 'example':
             return (
-              <ExampleBlock en={block.en} ja={block.ja} speakable={block.speakable} key={index} />
+              <ExampleBlock en={block.en} ja={block.ja} speakable={block.speakable} speaker={block.speaker} key={index} />
+            );
+          case 'table':
+            return (
+              <div className="block-table" key={index}>
+                <table>
+                  <thead>
+                    <tr>
+                      {block.headers.map((h, i) => (
+                        <th key={i}>{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {block.rows.map((row, r) => (
+                      <tr key={r}>
+                        {row.map((cell, c) => (
+                          <td key={c}>{cell}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             );
           case 'passage':
             return <PassageBlock lines={block.lines} key={index} />;

@@ -82,6 +82,18 @@
   backdrop-filter: blur(10px);
 }
 
+.block-example__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 16px rgba(79, 34, 104, 0.14);
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.7);
+  transform: scaleX(-1);
+}
+
 .block-example__text {
   flex: 1;
 }
@@ -90,6 +102,12 @@
   font-size: 18px;
   color: var(--text-h);
   font-weight: 600;
+}
+
+.block-example__name {
+  font-size: 12px;
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
 .block-example__ja {
@@ -129,6 +147,46 @@
   cursor: not-allowed;
 }
 
+/* ---- table ---- */
+.block-table {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px rgba(79, 34, 104, 0.06);
+}
+
+.block-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.block-table th,
+.block-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(79, 34, 104, 0.08);
+}
+
+.block-table thead th {
+  background: rgba(170, 59, 255, 0.12);
+  color: var(--text-h);
+  font-weight: 700;
+}
+
+.block-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.block-table tbody td:first-child {
+  color: var(--text-h);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 /* ---- passage (会話) ---- */
 .block-passage {
   display: flex;
@@ -145,6 +203,10 @@
 
 .passage-line--right {
   flex-direction: row-reverse;
+}
+
+.passage-line--left .passage-line__avatar {
+  transform: scaleX(-1);
 }
 
 .passage-line__avatar {
@@ -206,7 +268,11 @@
     height: 68px;
   }
 
-  .passage-line__body {
+.passage-line--left .passage-line__avatar {
+  transform: scaleX(-1);
+}
+
+.passage-line__body {
     max-width: calc(100% - 84px);
   }
 }

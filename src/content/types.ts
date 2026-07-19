@@ -35,7 +35,8 @@ export type Block =
   | { type: 'heading'; text: string; level?: 2 | 3 }
   | { type: 'list'; items: string[] }
   | { type: 'cards'; cards: { label: string; title: string; note: string }[] }
-  | { type: 'example'; en: string; ja?: string; speakable?: boolean } // 音声読み上げ対象
+  | { type: 'table'; headers: string[]; rows: string[][] }
+  | { type: 'example'; en: string; ja?: string; speakable?: boolean; speaker?: string } // 音声読み上げ対象
   | { type: 'passage'; lines: { speakerId: string; text: string }[] }; // 会話
 
 // ---- 確認テスト ----
