@@ -28,6 +28,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '一般動詞の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-imperative',
+    name: '命令系ドーナツ',
+    icon: logo,
+    description: '命令系の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {

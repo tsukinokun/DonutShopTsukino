@@ -349,6 +349,114 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-imperative',
+        slug: 'imperative',
+        title: '命令系',
+        summary: '「〜して」と頼む、いちばんシンプルな文。ドーナツをどうぞ、と手渡すとき。',
+        rewardId: 'reward-imperative',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '命令系（祈使文）は「〜して」「〜しなさい」と相手に頼んだり、さそうときに使う、いちばんシンプルな文です。主語を言わず、動詞からスッと始まります。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '命令系の形はとてもシンプルです。動詞の原形から始めるだけ。相手（you）は言わなくても伝わります。まずは形の一覧を見てみましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['種類', '形', '例', '意味・使い方'],
+              rows: [
+                ['肯定', '動詞の原形', 'Eat a donut.', 'そのまま「〜して」。'],
+                ['否定', "Don't + 動詞の原形", "Don't eat yet.", '「〜しないで」と止める。'],
+                ['丁寧', 'Please + 動詞の原形', 'Please sit down.', '「どうぞ」を添えてやさしく。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'Open the shop! のように、お店の準備を頼む。',
+                'Take a donut. のように、お客さんにすすめる。',
+                "Don't touch the oven. のように、危ないことを止める。",
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（お客さんへ）' },
+            { type: 'example', en: 'Take a donut.', ja: 'ドーナツをどうぞ。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（やさしく）' },
+            { type: 'example', en: 'Please sit down.', ja: 'どうぞお座りください。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（止める）' },
+            { type: 'example', en: "Don't burn the donuts.", ja: 'ドーナツを焦がさないで。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '命令系は動詞の原形から始める（主語の you は言わない）。',
+                '否定は Don\'t + 原形：Don\'t eat yet.',
+                'Please を添えると丁寧になる。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「ドーナツをどうぞ」を英訳すると？',
+              choices: ['You take a donut.', 'Take a donut.', 'Takes a donut.', 'Taking a donut.'],
+              answerIndex: 1,
+              explanation: '命令系は主語を言わず、動詞の原形 Take から始めます。',
+            },
+            {
+              id: 'q2',
+              prompt: '「焦がさないで」を英訳すると？',
+              choices: ['Not burn the donuts.', "Don't burn the donuts.", 'No burn the donuts.', "Doesn't burn the donuts."],
+              answerIndex: 1,
+              explanation: '否定の命令系は Don\'t + 原形 です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「どうぞお座りください」を英訳すると？',
+              choices: ['You sit down.', 'Sit down please.', 'Please sit down.', 'Sitting down.'],
+              answerIndex: 2,
+              explanation: 'Please を添えると丁寧な命令になります。',
+            },
+            {
+              id: 'q4',
+              prompt: '命令系で主語（you）はどうする？',
+              choices: ['必ず言う', '言わなくてもいい', '常に we にする', '常に they にする'],
+              answerIndex: 1,
+              explanation: '命令系は相手（you）を省略して動詞から始めます。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

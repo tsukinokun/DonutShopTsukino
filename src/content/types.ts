@@ -36,7 +36,6 @@ export type Block =
   | { type: 'list'; items: string[] }
   | { type: 'cards'; cards: { label: string; title: string; note: string }[] }
   | { type: 'table'; headers: string[]; rows: string[][] }
-  | { type: 'vocab'; words: { en: string; ja: string; note?: string }[] } // 頻出語彙
   | { type: 'example'; en: string; ja?: string; speakable?: boolean; speaker?: string } // 音声読み上げ対象
   | { type: 'passage'; lines: { speakerId: string; text: string }[] }; // 会話
 

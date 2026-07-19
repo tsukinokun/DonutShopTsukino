@@ -256,51 +256,6 @@
   border-color: var(--accent-border);
 }
 
-/* ---- vocab ---- */
-.block-vocab {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.block-vocab__item {
-  padding: 16px 18px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  box-shadow: 0 10px 20px rgba(79, 34, 104, 0.06);
-}
-
-.block-vocab__head {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-}
-
-.block-vocab__en {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-h);
-}
-
-.block-vocab__ja {
-  font-size: 15px;
-  color: var(--text);
-}
-
-.block-vocab__note {
-  margin: 6px 0 0;
-  font-size: 13px;
-  line-height: 1.7;
-  color: var(--text);
-}
-
-@media (max-width: 640px) {
-  .block-vocab {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 640px) {
   .passage-line__avatar {
     width: 68px;
