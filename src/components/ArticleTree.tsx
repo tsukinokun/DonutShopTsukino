@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { ContentNode } from '../content/types';
+import { getReward, RANK_LABEL } from '../content/rewards';
+import { useCollection } from '../lib/collectionStore';
 import './ArticleTree.css';
 
 interface ArticleTreeProps {
@@ -15,6 +17,7 @@ export const ArticleTree = ({
   variant = 'cards',
   onNavigate,
 }: ArticleTreeProps) => {
+  const collection = useCollection();
   return (
     <div className={`article-tree article-tree--${variant}`} data-depth={depth}>
       {nodes.map((node) => {
@@ -56,6 +59,8 @@ export const ArticleTree = ({
           );
         }
 
+        const reward = getReward(node.rewardId);
+        const rank = collection[node.rewardId] ?? null;
         return (
           <Link
             className="article-tree__card"
@@ -63,11 +68,29 @@ export const ArticleTree = ({
             key={node.id}
             onClick={onNavigate}
           >
-            <span className="article-tree__card-title">{node.title}</span>
-            {node.summary && <span className="article-tree__card-summary">{node.summary}</span>}
+            <div className="article-tree__card-body">
+              <span className="article-tree__card-title">{node.title}</span>
+              {node.summary && <span className="article-tree__card-summary">{node.summary}</span>}
+            </div>
+            {reward && (
+              <div className="article-tree__card-media">
+                <img
+                  className={`article-tree__card-icon${rank ? '' : ' article-tree__card-icon--locked'}`}
+                  src={reward.icon}
+                  alt={reward.name}
+                />
+                {rank && (
+                  <span className={`article-tree__card-rank article-tree__card-rank--${rank}`}>
+                    {RANK_LABEL[rank]}
+                  </span>
+                )}
+              </div>
+            )}
           </Link>
         );
       })}
     </div>
   );
 };
+
+
