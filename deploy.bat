@@ -27,27 +27,33 @@ if not exist "dist\index.html" (
 REM 3. SPA fallback: copy index.html to 404.html
 copy /Y dist\index.html dist\404.html
 
-REM 4. Deploy dist to gh-pages branch via orphan branch
+REM 4. Deploy dist to gh-pages branch
 echo === Pushing dist to gh-pages... ===
-git checkout --orphan gh-pages
+git branch gh-pages >nul 2>&1
 if errorlevel 1 (
-  echo ERROR: Failed to create gh-pages branch.
-  git checkout create-github-pages-deploy-bat
+  git checkout --orphan gh-pages
+) else (
+  git checkout gh-pages
+  git rm -rf .
+)
+if errorlevel 1 (
+  echo ERROR: Failed to switch to gh-pages branch.
+  git checkout main
   exit /b 1
 )
 git add -f dist
 git commit -m "Deploy to GitHub Pages" || (
   echo ERROR: Commit failed.
-  git checkout create-github-pages-deploy-bat
+  git checkout main
   exit /b 1
 )
 git push -f origin gh-pages
 if errorlevel 1 (
   echo ERROR: Failed to push to gh-pages.
-  git checkout create-github-pages-deploy-bat
+  git checkout main
   exit /b 1
 )
-git checkout create-github-pages-deploy-bat
+git checkout main
 
 echo === Done. https://tsukinokun.github.io/DonutShopTsukino/ ===
 echo NOTE: Set GitHub Pages source to gh-pages branch in repo settings (first time only).
