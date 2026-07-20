@@ -100,6 +100,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '不定詞の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-gerund',
+    name: '動名詞ドーナツ',
+    icon: logo,
+    description: '動名詞の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {

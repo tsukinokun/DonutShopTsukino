@@ -1681,6 +1681,114 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-gerund',
+        slug: 'gerund',
+        title: '動名詞',
+        summary: '「動詞の -ing 形」が、名詞として「〜すること」にはたらく。',
+        rewardId: 'reward-gerund',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '動名詞は、動詞の -ing 形（baking など）が名詞として「〜すること」にはたらく形です。ドーナツ屋でも「焼くのが好き」「焼くのは楽しい」と、動詞を名詞のように使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '動名詞は「動詞の -ing 形」そのものが名詞になるので、主語や目的語にできます。形は進行形の -ing と同じですが、「動いている最中」ではなく「〜すること」という事柄を表す点がちがいます。表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['はたらき', '例', '使い方'],
+              rows: [
+                ['主語になる', 'Baking is fun.', '「焼くこと」全体が文の主語。'],
+                ['目的語になる', 'I like baking.', '動詞（like など）のうしろに置く。'],
+                ['前置詞のうしろ', 'He is good at making.', 'at / of などのうしろは -ing。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '不定詞とのちがい',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '動名詞は「baking」のように -ing だけで名詞になる。',
+                '不定詞は「to bake」のように to + 原形で名詞になる。',
+                'like や enjoy のうしろは動名詞、-ing を使うことが多い。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（主語）' },
+            { type: 'example', en: 'Baking is fun.', ja: '焼くのは楽しいです。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（好き）' },
+            { type: 'example', en: 'I like baking.', ja: 'わたしは焼くのが好きです。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（上手）' },
+            { type: 'example', en: 'She is good at making donuts.', ja: '彼女はドーナツを作るのが得意です。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '動名詞は「動詞の -ing 形」が名詞になる。',
+                '主語や目的語、前置詞のうしろにはたらく。',
+                '「〜すること」を表す。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「焼くのは楽しい」を動名詞で英訳すると？',
+              choices: ['To bake is fun.', 'Bake is fun.', 'Baking is fun.', 'Baked is fun.'],
+              answerIndex: 2,
+              explanation: '動名詞は -ing 形で Baking とします。',
+            },
+            {
+              id: 'q2',
+              prompt: '「わたしは焼くのが好きです」を英訳すると？',
+              choices: ['I like bake.', 'I like to bake.', 'I like baking.', 'I like baked.'],
+              answerIndex: 2,
+              explanation: 'like のうしろは動名詞 baking を使うのが自然です。',
+            },
+            {
+              id: 'q3',
+              prompt: 'He is good ___ making. の空欄に入るのは？',
+              choices: ['at', 'to', 'for', 'of'],
+              answerIndex: 0,
+              explanation: '前置詞のうしろは動名詞なので、at を使います。',
+            },
+            {
+              id: 'q4',
+              prompt: '動名詞の形として正しいのは？',
+              choices: ['bake', 'to bake', 'baking', 'baked'],
+              answerIndex: 2,
+              explanation: '動名詞は「動詞の -ing 形」です。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
