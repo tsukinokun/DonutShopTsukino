@@ -88,6 +88,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '未来形の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-auxiliary-have-to-may',
+    name: '助動詞(have to/may)ドーナツ',
+    icon: logo,
+    description: '助動詞(have to/may)の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {

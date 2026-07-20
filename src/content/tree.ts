@@ -461,29 +461,28 @@ export const contentTree: ContentNode[] = [
         kind: 'article',
         id: 'art-auxiliary',
         slug: 'auxiliary-verb',
-        title: '助動詞',
-        summary: '「できる」「〜だろう」「しなければ」を添える、動詞のお手伝いさん。',
+        title: '助動詞(can)',
+        summary: '「できる」「してもいい」「〜してくれる？」を表す、一番身近な助動詞。',
         rewardId: 'reward-auxiliary',
         sections: {
           intro: [
             {
               type: 'text',
-              text: '助動詞は、動詞の「気持ち」をちょっと足してくれるお手伝いさんです。「できる」「〜だろう」「しなければ」のようなニュアンスを、あとからそっと添えます。',
+              text: 'can は「できる」「してもいい」「〜してくれる？」を表す、一番身近な助動詞です。ドーナツ屋でも「焼けますよ」「どうぞ召し上がって」「ここに座ってもいいですか？」とよく出てきます。',
             },
           ],
           concept: [
             {
               type: 'text',
-              text: '助動詞のルールはシンプルです。主語の形にかかわらず助動詞はそのまま、うしろの動詞はいつも原形です。まずはよく出る助動詞を表でおぼえましょう。',
+              text: 'can のルールはシンプルです。主語の形にかかわらず can はそのまま、うしろの動詞はいつも原形です。どんな意味で使うかを表でおぼえましょう。',
             },
             {
               type: 'table',
-              headers: ['助動詞', '意味', '例', '使い方'],
+              headers: ['意味', '使い方', '例'],
               rows: [
-                ['can', 'できる', 'I can bake.', '能力や「してもいい」。'],
-                ['will', '〜だろう', 'I will help.', 'これからすること（意志・予測）。'],
-                ['must', '〜しなければならない', 'You must wait.', '強い義務。'],
-                ['should', '〜するほうがいい', 'You should rest.', 'やさしいすすめ。'],
+                ['できる（能力）', '何ができるか', 'I can bake.'],
+                ['してもいい（許可）', 'ゆるやかな許可を与える', 'You can sit down.'],
+                ['〜してくれる？（依頼）', 'ていねいに頼む', 'Can you help me?'],
               ],
             },
             {
@@ -494,9 +493,9 @@ export const contentTree: ContentNode[] = [
             {
               type: 'list',
               items: [
-                '助動詞のうしろはいつも原形（bake / help / wait など）。',
+                'can のうしろはいつも原形（bake / sit / help など）。',
                 '三人称単数でも -s はつかない：He can bake.',
-                '否定・疑問は助動詞に not をつけたり、助動詞を前に出すだけ。',
+                '否定は cannot / can\'t、疑問は Can you...? のように can を文頭へ。',
               ],
             },
           ],
@@ -508,9 +507,9 @@ export const contentTree: ContentNode[] = [
             { type: 'text', text: 'つきの（自分）' },
             { type: 'example', en: 'I can bake donuts.', ja: 'わたしはドーナツを焼けます。', speakable: true, speaker: 'tsukino' },
             { type: 'text', text: 'つきの（お客さんへ）' },
-            { type: 'example', en: 'You should try one.', ja: 'あなたは一つ食べてみるといいですよ。', speakable: true, speaker: 'tsukino' },
-            { type: 'text', text: 'つきの（約束）' },
-            { type: 'example', en: 'I will open the shop.', ja: 'わたしがお店を開けます。', speakable: true, speaker: 'tsukino' },
+            { type: 'example', en: 'You can sit down.', ja: 'どうぞお座りください。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（同僚へ）' },
+            { type: 'example', en: 'Can you help me?', ja: '手伝ってくれますか？', speakable: true, speaker: 'tsukino' },
           ],
           quiz: [
             {
@@ -526,9 +525,9 @@ export const contentTree: ContentNode[] = [
             {
               type: 'list',
               items: [
-                '助動詞は動詞の気持ち（できる・〜だろう など）を添える。',
+                'can は「できる」「してもいい」「〜してくれる？」を表す。',
                 'うしろの動詞はいつも原形。',
-                'can / will / must / should の使い分けをおぼえる。',
+                '否定は can\'t、疑問は Can you...? のように can を前に出す。',
               ],
             },
           ],
@@ -551,17 +550,17 @@ export const contentTree: ContentNode[] = [
             },
             {
               id: 'q3',
-              prompt: '「あなたは休むほうがいい」を英訳すると？',
-              choices: ['You must rest.', 'You should rest.', 'You can rest.', 'You will rest.'],
-              answerIndex: 1,
-              explanation: 'やさしいすすめには should を使います。',
+              prompt: '「どうぞお座りください」を can で英訳すると？',
+              choices: ['You can sit down.', 'You can sits down.', 'Can you sit down?', 'You cans sit down.'],
+              answerIndex: 0,
+              explanation: '許可は You can + 原形 です。',
             },
             {
               id: 'q4',
-              prompt: '「しなければならない」を表す助動詞は？',
-              choices: ['will', 'can', 'must', 'should'],
-              answerIndex: 2,
-              explanation: '強い義務は must です。',
+              prompt: '「手伝ってくれますか？」を英訳すると？',
+              choices: ['You can help me.', 'Can you help me?', 'You help me can.', 'Can help you me?'],
+              answerIndex: 1,
+              explanation: '依頼は Can you...? のように can を文頭に出します。',
             },
           ],
         },
@@ -1460,6 +1459,116 @@ export const contentTree: ContentNode[] = [
               choices: ['I will make donuts.', 'I will making donuts.', 'I will to make donuts.', 'I will made donuts.'],
               answerIndex: 0,
               explanation: 'will のあとは原形 make です。',
+            },
+          ],
+        },
+      },
+      {
+        kind: 'article',
+        id: 'art-auxiliary-have-to-may',
+        slug: 'auxiliary-have-to-may',
+        title: '助動詞(must/have to/should/may)',
+        summary: '「しなければ」「してもいい」「〜したほうがいい」を表す、義務と許可の助動詞。',
+        rewardId: 'reward-auxiliary-have-to-may',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: 'この記事では、義務や許可を表す助動詞を扱います。「must（〜しなければならない）」「have to（〜しなければならない）」「should（〜したほうがいい）」「may（〜してもいい・かもしれない）」の4つです。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: 'これらは「気持ち（義務・すすめ・許可）」を動詞に添えます。must と have to は近い意味、should はやさしいすすめ、may は許可や可能性です。表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['表現', '意味', '使い方', '例'],
+              rows: [
+                ['must + 原形', '〜しなければならない', '話し手の強い義務', 'I must bake.'],
+                ['have to + 原形', '〜しなければならない', '外の力による義務', 'I have to open the shop.'],
+                ['should + 原形', '〜したほうがいい', 'やさしいすすめ', 'You should rest.'],
+                ['may + 原形', '〜してもいい（許可）', 'ゆるやかな許可', 'You may sit down.'],
+                ['may + 原形', '〜かもしれない（可能性）', '不確かな予測', 'It may rain.'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '形のポイント',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'must / should / may は助動詞なのでうしろは原形、三人称単数でも -s はつかない。',
+                'have to は「have + to」なので、主語で have / has が変わる（She has to...）。',
+                'must の否定は must not（〜してはいけない）、have to の否定は don\'t have to（しなくてもいい）。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（決意）' },
+            { type: 'example', en: 'I must bake donuts.', ja: 'わたしはドーナツを焼かなければなりません。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（仕事）' },
+            { type: 'example', en: 'I have to open the shop.', ja: 'わたしは店を開けなければなりません。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（やさしく）' },
+            { type: 'example', en: 'You may sit down.', ja: 'お座りになってもいいですよ。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                'must / have to は「しなければならない」。',
+                'should は「〜したほうがいい」。',
+                'may は「〜してもいい」「〜かもしれない」。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「わたしは店を開けなければなりません」を英訳すると？',
+              choices: ['I have to open the shop.', 'I has to open the shop.', 'I having to open the shop.', 'I must to open the shop.'],
+              answerIndex: 0,
+              explanation: '「しなければならない」は have to + 原形 です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'She ___ bake. の空欄に入るのは？',
+              choices: ['have to', 'has to', 'having to', 'has to bake'],
+              answerIndex: 1,
+              explanation: '三人称単数は has to です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「あなたは休むほうがいい」を英訳すると？',
+              choices: ['You must rest.', 'You should rest.', 'You may rest.', 'You have to rest.'],
+              answerIndex: 1,
+              explanation: 'やさしいすすめには should を使います。',
+            },
+            {
+              id: 'q4',
+              prompt: '「お座りになってもいいですよ」を英訳すると？',
+              choices: ['You must sit down.', 'You can sit down.', 'You may sit down.', 'You have to sit down.'],
+              answerIndex: 2,
+              explanation: 'ゆるやかな許可は may を使います。',
             },
           ],
         },
