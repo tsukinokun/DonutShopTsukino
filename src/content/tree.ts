@@ -680,6 +680,117 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-question-word',
+        slug: 'question-word',
+        title: '疑問詞',
+        summary: '「何・誰・いつ・どこ・なぜ・どう」で問いを投げる、6つの言葉。',
+        rewardId: 'reward-question-word',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '疑問詞は「何について知りたいか」を示す言葉です。ドーナツ屋さんでも「いつ開くの？」「どこにあるの？」と客さんから聞かれます。6つの疑問詞をおぼえましょう。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '疑問詞は文の最初に置き、そのあとに「be動詞 / 助動詞 / do・does」を引っ張ってきます。まずは6つの意味を表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['疑問詞', '意味', '聞きたいこと', '例'],
+              rows: [
+                ['what', '何', '物・こと', 'What is this?（これは何？）'],
+                ['who', '誰', '人', 'Who are you?（あなたは誰？）'],
+                ['when', 'いつ', '時', 'When do you open?（いつ開く？）'],
+                ['where', 'どこ', '場所', 'Where is the shop?（店はどこ？）'],
+                ['why', 'なぜ', '理由', 'Why are you happy?（なぜうれしい？）'],
+                ['how', 'どう', '方法・様子', 'How do you make it?（どう作る？）'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '形のポイント',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '疑問詞を文の最初に置く。',
+                'そのあとに be動詞 / 助動詞、または do・does を出す。',
+                '一般動詞の文では do / does を使い、動詞は原形に。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'お客さん' },
+            { type: 'example', en: 'What do you sell?', ja: '何を売っていますか？', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'お客さん' },
+            { type: 'example', en: 'Where is the shop?', ja: '店はどこですか？', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'お客さん' },
+            { type: 'example', en: 'When do you open?', ja: 'いつ開店しますか？', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '疑問詞は what / who / when / where / why / how の6つ。',
+                '文の最初に置き、そのあとに be動詞・助動詞・do・does を出す。',
+                '何を聞きたいかで疑問詞を選ぶ。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「誰」を表す疑問詞は？',
+              choices: ['what', 'who', 'when', 'where'],
+              answerIndex: 1,
+              explanation: '人を聞くときは who です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「いつ」を表す疑問詞は？',
+              choices: ['where', 'why', 'when', 'how'],
+              answerIndex: 2,
+              explanation: '時を聞くときは when です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「なぜ」を表す疑問詞は？',
+              choices: ['what', 'who', 'where', 'why'],
+              answerIndex: 3,
+              explanation: '理由を聞くときは why です。',
+            },
+            {
+              id: 'q4',
+              prompt: '"How ___ you make it?" の空欄に入るのは？',
+              choices: ['are', 'do', 'is', 'does'],
+              answerIndex: 1,
+              explanation: '一般動詞 make の文なので、主語 you には do を使います。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
