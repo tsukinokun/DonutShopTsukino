@@ -2228,6 +2228,544 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-present-perfect',
+        slug: 'present-perfect',
+        title: '現在完了',
+        summary: '「have + 過去分詞」で、経験・継続・完了を表す。',
+        rewardId: 'reward-present-perfect',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '現在完了は「have + 過去分詞」の形で、過去と今をつなぐ働きをします。ドーナツ屋でも「一度焼いたことがある」「朝から開けている」「やっと焼き終わった」のように使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '現在完了は大きく3つの使い方があります。ずっと昔からの「経験」、ずっと続いている「継続」、さっき終わった「完了・結果」です。表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['使い方', '意味', '例', '目印'],
+              rows: [
+                ['経験', '〜したことがある', 'I have baked donuts.', 'ever / never と一緒に'],
+                ['継続', 'ずっと〜している', 'The shop has been open.', 'for / since と一緒に'],
+                ['完了', 'やっと〜した', 'I have made donuts.', 'just / already と一緒に'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '形のポイント',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'have / has + 過去分詞（三人称単数は has）。',
+                '過去形（baked）とはちがい、「今へのつながり」を表す。',
+                '経験は baked、継続・完了も baked と同じ過去分詞を使う。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（経験）' },
+            { type: 'example', en: 'I have baked donuts.', ja: 'わたしはドーナツを焼いたことがあります。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（継続）' },
+            { type: 'example', en: 'The shop has been open.', ja: 'お店は開いたままです（ずっと開いている）。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（完了）' },
+            { type: 'example', en: 'I have made donuts.', ja: 'わたしはドーナツを作り終えました。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '現在完了は「have / has + 過去分詞」。',
+                '経験・継続・完了の3つの使い方。',
+                '過去形とはちがい、今へのつながりを表す。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「一度焼いたことがある」を英訳すると？',
+              choices: ['I baked donuts.', 'I have baked donuts.', 'I bake donuts.', 'I was baking donuts.'],
+              answerIndex: 1,
+              explanation: '経験の現在完了は have + 過去分詞 です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「お店は開いたままだ（継続）」を英訳すると？',
+              choices: ['The shop opened.', 'The shop has been open.', 'The shop was open.', 'The shop opens.'],
+              answerIndex: 1,
+              explanation: '継続の現在完了は has been open です。',
+            },
+            {
+              id: 'q3',
+              prompt: '現在完了の形として正しいのは？',
+              choices: ['have + 原形', 'have + 過去分詞', 'have + -ing', 'had + 原形'],
+              answerIndex: 1,
+              explanation: '現在完了は have / has + 過去分詞 です。',
+            },
+            {
+              id: 'q4',
+              prompt: '「やっと作り終えた」を表すのはどれ？',
+              choices: ['I make donuts.', 'I made donuts.', 'I have made donuts.', 'I will make donuts.'],
+              answerIndex: 2,
+              explanation: '完了の現在完了は have made です。',
+            },
+          ],
+        },
+      },
+      {
+        kind: 'article',
+        id: 'art-present-perfect-progressive',
+        slug: 'present-perfect-progressive',
+        title: '現在完了進行形',
+        summary: '「have been + 動詞ing」で、過去からずっと続けている動作。',
+        rewardId: 'reward-present-perfect-progressive',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '現在完了進行形は「have been + 動詞の -ing 形」で、過去のあるときから今まで「ずっと動き続けている」ことを表します。ドーナツ屋で「朝からずっと焼き続けている」ときに使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '現在完了進行形は「現在完了（have been）」と「進行形（-ing）」が合わさった形です。be動詞の過去分詞 been のうしろに -ing を置きます。まずは形の一覧を見てみましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['主語', '形', '例'],
+              rows: [
+                ['I / you / we / they', 'have been + -ing', 'I have been baking.'],
+                ['he / she / it', 'has been + -ing', 'She has been selling.'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '現在完了とのちがい',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '現在完了：I have baked.（焼いた、という経験・結果）。',
+                '現在完了進行形：I have been baking.（ずっと焼き続けている）。',
+                '「動き続けている最中」を強調するときに使う。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（朝から）' },
+            { type: 'example', en: 'I have been baking donuts.', ja: 'わたしはずっとドーナツを焼き続けています。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（客席で）' },
+            { type: 'example', en: 'She has been selling donuts.', ja: '彼女はずっとドーナツを売り続けています。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（行列）' },
+            { type: 'example', en: 'They have been waiting.', ja: '彼らはずっと待ち続けています。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '現在完了進行形は「have been + 動詞の -ing 形」。',
+                '過去からずっと動き続けていることを表す。',
+                '三人称単数は has been + -ing。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「ずっと焼き続けています」を英訳すると？',
+              choices: ['I have baked donuts.', 'I have been baking donuts.', 'I baked donuts.', 'I am baking donuts.'],
+              answerIndex: 1,
+              explanation: '継続の動きは have been + -ing です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'She ___ selling donuts. の空欄に入るのは？',
+              choices: ['have been', 'has been', 'have being', 'has being'],
+              answerIndex: 1,
+              explanation: '三人称単数は has been です。',
+            },
+            {
+              id: 'q3',
+              prompt: '現在完了進行形の形として正しいのは？',
+              choices: ['have + 過去分詞', 'have been + -ing', 'has + 過去分詞', 'have being + -ing'],
+              answerIndex: 1,
+              explanation: 'have been + 動詞の -ing 形 です。',
+            },
+            {
+              id: 'q4',
+              prompt: '「彼らはずっと待ち続けている」を英訳すると？',
+              choices: ['They have waited.', 'They waited.', 'They have been waiting.', 'They are wait.'],
+              answerIndex: 2,
+              explanation: '継続の動きは have been waiting です。',
+            },
+          ],
+        },
+      },
+      {
+        kind: 'article',
+        id: 'art-participle',
+        slug: 'participle',
+        title: '分詞',
+        summary: '「動詞の -ing / 過去分詞」が、うしろの名詞を修飾する。',
+        rewardId: 'reward-participle',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '分詞は、動詞の形（ing や過去分詞）が形容詞のように名詞を修飾する働きです。ドーナツ屋でも「焼いているドーナツ」「焼かれたドーナツ」と、名詞のうしろに置いて説明するときに使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '分詞には2種類あります。能動（自分で動く）を表す -ing と、受動（される）を表す過去分詞です。名詞の「うしろ」に置くのがこの記事のポイントです。表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['分詞', '意味', '例', '使い方'],
+              rows: [
+                ['-ing（能動）', '〜している', 'the donut baking', '自分から動いている様子。'],
+                ['過去分詞（受動）', '〜された', 'the donut baked', '他から動作を受けている。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'the donut baking in the oven のように、うしろから名詞を修飾。',
+                'the donuts sold here のように、過去分詞で「売られた」を表す。',
+                'a donut made by Tsukino のように、by で「する人」を添えることも。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（オーブン）' },
+            { type: 'example', en: 'the donut baking in the oven', ja: 'オーブンで焼いているドーナツ', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（棚）' },
+            { type: 'example', en: 'the donuts sold here', ja: 'ここで売られているドーナツ', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（自慢）' },
+            { type: 'example', en: 'a donut made by Tsukino', ja: 'つきのが作ったドーナツ', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '分詞は動詞の形が名詞を修飾する。',
+                '-ing は能動（〜している）、過去分詞は受動（〜された）。',
+                '名詞のうしろに置く（後置修飾）。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「焼いているドーナツ」を英訳すると？',
+              choices: ['the donut baked', 'the donut baking', 'the bake donut', 'the baked donut'],
+              answerIndex: 1,
+              explanation: '能動の -ing で the donut baking です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「売られているドーナツ」を英訳すると？',
+              choices: ['the donuts selling', 'the donuts sell', 'the donuts sold', 'the donut sells'],
+              answerIndex: 2,
+              explanation: '受動の過去分詞で the donuts sold です。',
+            },
+            {
+              id: 'q3',
+              prompt: '分詞が名詞を修飾するとき、置く位置は？',
+              choices: ['名詞の前', '名詞のうしろ', '文の最初', '文の最後'],
+              answerIndex: 1,
+              explanation: '後置修飾なので名詞のうしろです。',
+            },
+            {
+              id: 'q4',
+              prompt: '「つきのが作ったドーナツ」を英訳すると？',
+              choices: ['a donut making by Tsukino', 'a donut made by Tsukino', 'a donut makes by Tsukino', 'a donut make by Tsukino'],
+              answerIndex: 1,
+              explanation: '受動の過去分詞 made を使います。',
+            },
+          ],
+        },
+      },
+      {
+        kind: 'article',
+        id: 'art-relative-pronoun',
+        slug: 'relative-pronoun',
+        title: '関係代名詞',
+        summary: '「who / which / that」で、名詞を後ろの文で修飾する。',
+        rewardId: 'reward-relative-pronoun',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '関係代名詞は、名詞のうしろに「その名詞についての文」をつなぐ言葉です。ドーナツ屋でも「あそこにいる客さんは、いつも笑顔の人だ」のように、人や物の説明を後ろに添えるときに使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '関係代名詞は、人なら who / that、物なら which / that を使います。うしろの文の「主語」や「目的語」のかわりになります。表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['関係代名詞', '使うもの', '例'],
+              rows: [
+                ['who', '人（主語）', 'the girl who smiles'],
+                ['which', '物（主語・目的語）', 'the donut which I ate'],
+                ['that', '人・物どちらも', 'the donut that I made'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '形のポイント',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '名詞のうしろに who / which / that を置く。',
+                'うしろの文は「関係代名詞＋動詞…」と続く。',
+                'that は人にも物にも使える便利な言葉。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（客さん）' },
+            { type: 'example', en: 'the girl who smiles', ja: '笑顔の女の子', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（ドーナツ）' },
+            { type: 'example', en: 'the donut which I ate', ja: 'わたしが食べたドーナツ', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（自慢）' },
+            { type: 'example', en: 'the donut that I made', ja: 'わたしが作ったドーナツ', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '関係代名詞は名詞のうしろに説明の文をつなぐ。',
+                '人は who / that、物は which / that。',
+                'うしろの文の主語・目的語のかわりになる。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「笑顔の女の子」を英訳すると？',
+              choices: ['the girl which smiles', 'the girl who smiles', 'the girl that smiles', 'the girl what smiles'],
+              answerIndex: 1,
+              explanation: '人を表すのは who です（that も可）。',
+            },
+            {
+              id: 'q2',
+              prompt: '「わたしが食べたドーナツ」を英訳すると？',
+              choices: ['the donut who I ate', 'the donut which I ate', 'the donut what I ate', 'the donut whom I ate'],
+              answerIndex: 1,
+              explanation: '物を表すのは which です（that も可）。',
+            },
+            {
+              id: 'q3',
+              prompt: '関係代名詞が人にも物にも使えるのは？',
+              choices: ['who', 'which', 'that', 'what'],
+              answerIndex: 2,
+              explanation: 'that は人・物どちらにも使えます。',
+            },
+            {
+              id: 'q4',
+              prompt: '関係代名詞を置く位置として正しいのは？',
+              choices: ['文の最初', '名詞のうしろ', '動詞のうしろ', '文の最後'],
+              answerIndex: 1,
+              explanation: '修飾する名詞のうしろに置きます。',
+            },
+          ],
+        },
+      },
+      {
+        kind: 'article',
+        id: 'art-subjunctive',
+        slug: 'subjunctive',
+        title: '仮定法',
+        summary: '「もし〜だったら」を表す、If I were 〜 の世界。',
+        rewardId: 'reward-subjunctive',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '仮定法は「もし〜だったら（でも現実はちがう）」という、想像の世界を表す形です。ドーナツ屋でも「もしわたしが客さんだったら、このドーナツを買うのに」のような願いや想像に使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '仮定法では、be動詞は主語にかかわらず were を使います。よく出るのが「If I were 〜」です。また、動詞は過去形に見えますが、意味は「今の反事実」を表します。表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['形', '意味', '例'],
+              rows: [
+                ['If I were ...', 'もしわたしが〜なら（現実はちがう）', 'If I were you, ...'],
+                ['If he were ...', 'もし彼が〜なら', 'If he were here, ...'],
+                ['I would ...', '〜するだろう（仮の話）', 'I would buy it.'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '形のポイント',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'be動詞は were を使う（I were / he were など）。',
+                'would / could を使って「仮の結果」を言う。',
+                '「現実ではない」ことを表すのが仮定法。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（想像）' },
+            { type: 'example', en: 'If I were you, I would eat it.', ja: 'もしわたしがあなたなら、食べますね。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（願い）' },
+            { type: 'example', en: 'If he were here, he would smile.', ja: 'もし彼がここにいたら、笑うでしょうに。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（夢）' },
+            { type: 'example', en: 'I would buy this donut.', ja: 'わたしはこのドーナツを買うでしょう。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '仮定法は「もし〜なら（現実はちがう）」を表す。',
+                'be動詞は were を使う（If I were 〜）。',
+                '結果は would / could を使う。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「もしわたしがあなたなら」を英訳すると？',
+              choices: ['If I was you,', 'If I were you,', 'If I am you,', 'If I be you,'],
+              answerIndex: 1,
+              explanation: '仮定法の be動詞は were です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「もし彼がここにいたら」を英訳すると？',
+              choices: ['If he was here,', 'If he is here,', 'If he were here,', 'If he be here,'],
+              answerIndex: 2,
+              explanation: '三人称でも仮定法は were を使います。',
+            },
+            {
+              id: 'q3',
+              prompt: '仮定法の結果を表すのに使うのは？',
+              choices: ['will', 'would', 'do', 'does'],
+              answerIndex: 1,
+              explanation: '仮の結果は would を使います。',
+            },
+            {
+              id: 'q4',
+              prompt: '仮定法が表すのはどれ？',
+              choices: ['現実のこと', '過去の事実', '現実ではない想像', '未来の予定'],
+              answerIndex: 2,
+              explanation: '仮定法は「現実ではない」ことを表します。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

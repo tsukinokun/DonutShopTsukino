@@ -130,6 +130,36 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '間接疑問文の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-present-perfect',
+    name: '現在完了ドーナツ',
+    icon: logo,
+    description: '現在完了の確認テストで手に入る、まあるいドーナツ。',
+  },
+  {
+    id: 'reward-present-perfect-progressive',
+    name: '現在完了進行形ドーナツ',
+    icon: logo,
+    description: '現在完了進行形の確認テストで手に入る、まあるいドーナツ。',
+  },
+  {
+    id: 'reward-participle',
+    name: '分詞ドーナツ',
+    icon: logo,
+    description: '分詞の確認テストで手に入る、まあるいドーナツ。',
+  },
+  {
+    id: 'reward-relative-pronoun',
+    name: '関係代名詞ドーナツ',
+    icon: logo,
+    description: '関係代名詞の確認テストで手に入る、まあるいドーナツ。',
+  },
+  {
+    id: 'reward-subjunctive',
+    name: '仮定法ドーナツ',
+    icon: logo,
+    description: '仮定法の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {
