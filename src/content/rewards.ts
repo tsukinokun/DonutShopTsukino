@@ -82,6 +82,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '過去進行形の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-future',
+    name: '未来形ドーナツ',
+    icon: logo,
+    description: '未来形の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {

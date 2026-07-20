@@ -1356,6 +1356,114 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-future',
+        slug: 'future',
+        title: '未来形',
+        summary: '「これからやる・起こる」を表す、will / be going to / 現在形の未来。',
+        rewardId: 'reward-future',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '未来形は「これからやること」「これから起こること」を表します。ドーナツ屋の看板に「明日開きます」と書くとき、英語では I will open the shop. の形を使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '未来を表す形は大きく3つあります。「will」「be going to」「現在形の未来用法」です。まずは形と使い分けを表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['形', 'つくり方', '使い方', '例'],
+              rows: [
+                ['will', 'will + 動詞の原形', 'その場の意志・予測', 'I will help you.'],
+                ['be going to', 'am/is/are going to + 原形', '計画・用意がある', 'I am going to bake.'],
+                ['現在形（未来）', '現在形の文 + 未来の時間', '今日の予定など', 'I open the shop tomorrow.'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'I will open the shop. のように、その場で決めたことを言う。',
+                'I am going to make donuts. のように、前から決まっている計画を言う。',
+                'The shop opens tomorrow. のように、スケジュールを現在形で表す。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（意志）' },
+            { type: 'example', en: 'I will help you.', ja: 'わたしが手伝います。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（計画）' },
+            { type: 'example', en: 'I am going to bake.', ja: 'これから焼きます。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（予定）' },
+            { type: 'example', en: 'The shop opens tomorrow.', ja: 'お店は明日開きます。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '未来形は will / be going to / 現在形の未来用法がある。',
+                '意志・予測は will、計画は be going to。',
+                '今日の予定などは現在形で未来を表せる。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「手伝います」をその場の意志で言うと？',
+              choices: ['I help you.', 'I will help you.', 'I am help you.', 'I going to help you.'],
+              answerIndex: 1,
+              explanation: '意志・予測の未来は will + 原形 です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「これから焼きます」（前から決まっている計画）を表すと？',
+              choices: ['I will bake.', 'I am going to bake.', 'I bake.', 'I baking.'],
+              answerIndex: 1,
+              explanation: '計画がある未来は be going to + 原形 です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「The shop opens tomorrow.」の形はどの未来表現？',
+              choices: ['will', 'be going to', '現在形の未来', '過去形'],
+              answerIndex: 2,
+              explanation: '予定・スケジュールは現在形で未来を表します。',
+            },
+            {
+              id: 'q4',
+              prompt: '「明日ドーナツを作る」を will で言うと？',
+              choices: ['I will make donuts.', 'I will making donuts.', 'I will to make donuts.', 'I will made donuts.'],
+              answerIndex: 0,
+              explanation: 'will のあとは原形 make です。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
