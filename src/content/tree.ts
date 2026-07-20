@@ -791,6 +791,114 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-present-progressive',
+        slug: 'present-progressive',
+        title: '現在進行形',
+        summary: '「今、ちょうどやっている最中」を表す、be + 動詞ing の形。',
+        rewardId: 'reward-present-progressive',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '現在進行形は「今、まさにそのときやっている最中」を表します。ドーナツを今焼いているなら、it is baking。動きの「いま」を写真に撮るような形です。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '現在進行形は「be動詞 + 動詞の -ing 形」で作ります。be動詞は主語によって am / is / are に変わり、うしろの動詞はいつも -ing です。まずは形の一覧を見てみましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['主語', '形', '例', '使い方'],
+              rows: [
+                ['I', 'am + -ing', 'I am baking.', '自分が今やっている。'],
+                ['you / we / they', 'are + -ing', 'They are waiting.', '複数が今やっている。'],
+                ['he / she / it', 'is + -ing', 'She is selling.', '三人称単数が今やっている。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '-ing のつけ方',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '基本は語尾に -ing：bake → baking。',
+                'e で終わる語は e をとって -ing：make → making。',
+                '「子音字 + 短母音 + 子音字」は語末を重ねて -ing：shop → shopping。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（オーブン前）' },
+            { type: 'example', en: 'I am baking donuts.', ja: 'わたしは今ドーナツを焼いています。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（客席で）' },
+            { type: 'example', en: 'She is eating a donut.', ja: '彼女は今ドーナツを食べています。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（行列を見て）' },
+            { type: 'example', en: 'They are waiting outside.', ja: '彼らは今外で待っています。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '現在進行形は「be動詞 + 動詞の -ing 形」。',
+                'be動詞は主語で am / is / are に変わる。',
+                '「今、ちょうどやっている最中」を表す。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「わたしは今焼いています」を英訳すると？',
+              choices: ['I bake donuts.', 'I am baking donuts.', 'I baked donuts.', 'I will bake donuts.'],
+              answerIndex: 1,
+              explanation: '現在進行形は am + baking です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'She ___ a donut.（現在進行形）の空欄に入るのは？',
+              choices: ['eat', 'eats', 'is eating', 'ate'],
+              answerIndex: 2,
+              explanation: '三人称単数は is + eating です。',
+            },
+            {
+              id: 'q3',
+              prompt: 'make の -ing 形は？',
+              choices: ['makeing', 'making', 'makeng', 'makes'],
+              answerIndex: 1,
+              explanation: 'e で終わる語は e をとって making です。',
+            },
+            {
+              id: 'q4',
+              prompt: 'They are ___ outside. の空欄に入るのは？',
+              choices: ['wait', 'waits', 'waiting', 'waited'],
+              answerIndex: 2,
+              explanation: '複数の They は are + waiting です。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
