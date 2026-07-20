@@ -1573,6 +1573,114 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-infinitive',
+        slug: 'infinitive',
+        title: '不定詞',
+        summary: '「to + 動詞の原形」が、名詞・形容詞・副詞のはたらきをする。',
+        rewardId: 'reward-infinitive',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '不定詞は「to + 動詞の原形」の形で、「〜すること」のように使います。ドーナツ屋でも「焼くために」「焼くのが好き」と、動詞をそのまま言わずに「to + 原形」にして使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '不定詞は1つの形ですが、文中でのはたらきによって3つの用法に分かれます。名詞として使うか、形容詞として名詞を修飾するか、副詞として理由や目的を表すかです。表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['用法', 'はたらき', '例', '使い方'],
+              rows: [
+                ['名詞用法', '「〜すること」全体が主語や目的語', 'To bake is fun.', '文の成分として動詞のかたまりを置く。'],
+                ['形容詞用法', 'うしろの名詞を修飾', 'a donut to eat', '「食べる（ための）ドーナツ」のように。'],
+                ['副詞用法', '目的や理由を表す', 'I came to buy.', '「〜するために」と理由・目的を添える。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'To make donuts is fun. のように、名詞として「〜すること」を主語にする。',
+                'a donut to eat のように、名詞を修飾する。',
+                'I went to the shop to buy donuts. のように、目的を表す。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（名詞用法）' },
+            { type: 'example', en: 'To bake is fun.', ja: '焼くのは楽しいです。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（形容詞用法）' },
+            { type: 'example', en: 'I have a donut to eat.', ja: 'わたしは食べるドーナツを持っています。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（副詞用法）' },
+            { type: 'example', en: 'I came to buy donuts.', ja: 'わたしはドーナツを買いに来ました。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '不定詞は「to + 動詞の原形」。',
+                '名詞用法・形容詞用法・副詞用法の3つ。',
+                '副詞用法は「〜するために」の目的・理由を表す。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「焼くのは楽しい」を英訳すると？',
+              choices: ['Bake is fun.', 'To bake is fun.', 'Baking is fun.', 'Bakes is fun.'],
+              answerIndex: 1,
+              explanation: '「〜すること」を名詞として主語にするときは To bake です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'a donut to eat の不定詞の用法は？',
+              choices: ['名詞用法', '形容詞用法', '副詞用法', '動詞用法'],
+              answerIndex: 1,
+              explanation: 'うしろの名詞 donut を修飾しているので形容詞用法です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「わたしは買いに来ました」を英訳すると？',
+              choices: ['I came for buy donuts.', 'I came buy donuts.', 'I came to buy donuts.', 'I came buying donuts.'],
+              answerIndex: 2,
+              explanation: '目的を表す副詞用法は to buy です。',
+            },
+            {
+              id: 'q4',
+              prompt: '不定詞の形として正しいのは？',
+              choices: ['to baking', 'to baked', 'to bake', 'to bakeing'],
+              answerIndex: 2,
+              explanation: '不定詞は「to + 動詞の原形」です。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

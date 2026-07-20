@@ -94,6 +94,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '助動詞(have to/may)の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-infinitive',
+    name: '不定詞ドーナツ',
+    icon: logo,
+    description: '不定詞の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {
