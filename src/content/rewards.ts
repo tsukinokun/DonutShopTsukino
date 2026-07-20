@@ -112,6 +112,24 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '比較級・最上級の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-passive',
+    name: '受け身ドーナツ',
+    icon: logo,
+    description: '受け身の確認テストで手に入る、まあるいドーナツ。',
+  },
+  {
+    id: 'reward-conjunction',
+    name: '接続詞ドーナツ',
+    icon: logo,
+    description: '接続詞の確認テストで手に入る、まあるいドーナツ。',
+  },
+  {
+    id: 'reward-indirect-question',
+    name: '間接疑問文ドーナツ',
+    icon: logo,
+    description: '間接疑問文の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {

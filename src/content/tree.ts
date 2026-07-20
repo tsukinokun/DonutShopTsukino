@@ -1903,6 +1903,331 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-passive',
+        slug: 'passive',
+        title: '受け身',
+        summary: '「be + 過去分詞」で、「〜される」を表す形。',
+        rewardId: 'reward-passive',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '受け身は「だれかに〜される」「〜された」を表す形です。ドーナツが「焼かれる」「売られる」など、動作を受ける側を主役にするときに使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '受け身は「be動詞 + 過去分詞」で作ります。be動詞は主語や時制で am / is / are / was / were に変わり、うしろの動詞はいつも過去分詞です。まずは形の一覧を見てみましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['時制', '形', '例'],
+              rows: [
+                ['現在', 'am / is / are + 過去分詞', 'Donuts are baked.'],
+                ['過去', 'was / were + 過去分詞', 'The shop was opened.'],
+                ['未来', 'will be + 過去分詞', 'Donuts will be sold.'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '能動と受動のちがい',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '能動：I bake donuts.（わたしが焼く）。',
+                '受動：Donuts are baked (by me).（ドーナツが焼かれる）。',
+                '「される側」を主語にし、by で「する人」を置くこともできる。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（出来上がり）' },
+            { type: 'example', en: 'Donuts are baked.', ja: 'ドーナツは焼かれます。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（開店）' },
+            { type: 'example', en: 'The shop was opened.', ja: 'お店は開けられました。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（予定）' },
+            { type: 'example', en: 'Donuts will be sold.', ja: 'ドーナツは売られるでしょう。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '受け身は「be動詞 + 過去分詞」。',
+                'be動詞は主語や時制で変わる。',
+                '「される側」を主語にする。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「ドーナツは焼かれます」を英訳すると？',
+              choices: ['Donuts bake.', 'Donuts are baked.', 'Donuts baked.', 'Donuts baking.'],
+              answerIndex: 1,
+              explanation: '受け身は are + 過去分詞 で Donuts are baked です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「お店は開けられました」を英訳すると？',
+              choices: ['The shop opens.', 'The shop was opened.', 'The shop is opened.', 'The shop opened.'],
+              answerIndex: 1,
+              explanation: '過去の受け身は was + 過去分詞 です。',
+            },
+            {
+              id: 'q3',
+              prompt: '受け身の形として正しいのは？',
+              choices: ['be + 原形', 'be + 過去分詞', 'be + -ing', 'be + to do'],
+              answerIndex: 1,
+              explanation: '受け身は be動詞 + 過去分詞 です。',
+            },
+            {
+              id: 'q4',
+              prompt: '「ドーナツは売られるでしょう」を英訳すると？',
+              choices: ['Donuts sell.', 'Donuts are sold.', 'Donuts will be sold.', 'Donuts sold.'],
+              answerIndex: 2,
+              explanation: '未来の受け身は will be + 過去分詞 です。',
+            },
+          ],
+        },
+      },
+      {
+        kind: 'article',
+        id: 'art-conjunction',
+        slug: 'conjunction',
+        title: '接続詞',
+        summary: '文と文をつなぐ、when / if / because / that のはたらき。',
+        rewardId: 'reward-conjunction',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '接続詞は、文と文をつなぐ「じょうぎ」のような言葉です。ドーナツ屋でも「お客さんが来たら」「雨だから」「甘いと」と、二つの文をつなぐときに使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: 'よく出る接続詞を4つおぼえましょう。時をつなぐ when、条件をつなぐ if、理由をつなぐ because、中身をつなぐ that です。表でおぼえましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['接続詞', '意味', 'つなぐ関係', '例'],
+              rows: [
+                ['when', '〜するとき', '時', 'When you come, ...'],
+                ['if', '〜なら（ば）', '条件', 'If you like it, ...'],
+                ['because', '〜なので', '理由', '... because it is sweet.'],
+                ['that', '（中身をつなぐ）', '名詞節', 'I think that ...'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'When the shop opens, I bake. のように、時をつなぐ。',
+                'If you are hungry, eat one. のように、条件をつなぐ。',
+                'I am happy because you came. のように、理由をつなぐ。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（時）' },
+            { type: 'example', en: 'When you come, I bake.', ja: 'あなたが来るとき、わたしは焼きます。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（理由）' },
+            { type: 'example', en: 'I am happy because you came.', ja: 'あなたが来てくれたのでうれしいです。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（条件）' },
+            { type: 'example', en: 'If you like it, eat one.', ja: '気に入ったら一つ食べて。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                'when は「〜するとき」（時）、if は「〜なら」（条件）。',
+                'because は「〜なので」（理由）。',
+                'that は文の中身をつなぐ。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「あなたが来るとき」を英訳すると？',
+              choices: ['If you come', 'When you come', 'Because you come', 'That you come'],
+              answerIndex: 1,
+              explanation: '時をつなぐのは when です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「気に入ったら」を英訳すると？',
+              choices: ['When you like it', 'If you like it', 'Because you like it', 'That you like it'],
+              answerIndex: 1,
+              explanation: '条件をつなぐのは if です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「甘いので」を英訳すると？',
+              choices: ['when it is sweet', 'if it is sweet', 'because it is sweet', 'that it is sweet'],
+              answerIndex: 2,
+              explanation: '理由をつなぐのは because です。',
+            },
+            {
+              id: 'q4',
+              prompt: '「わたしは〜だと思います」をつなぐ接続詞は？',
+              choices: ['when', 'if', 'because', 'that'],
+              answerIndex: 3,
+              explanation: '中身をつなぐのは that です（I think that ...）。',
+            },
+          ],
+        },
+      },
+      {
+        kind: 'article',
+        id: 'art-indirect-question',
+        slug: 'indirect-question',
+        title: '間接疑問文',
+        summary: '「どこか知らない」を表す、疑問詞を含む名詞節。',
+        rewardId: 'reward-indirect-question',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '間接疑問文は、「どこにあるか知らない」「いつ開くか教えて」のように、疑問の内容を文の一部として組み込む形です。ドーナツ屋でも「トッピングはどこかしら？」とつぶやくときに使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '間接疑問文は「know / tell me などのうしろに、疑問詞（what / where / when など）で始まる節」を置きます。ポイントは、疑問文のときの語順（do を前に出すなど）を使わず、主語＋動詞のまま並べることです。',
+            },
+            {
+              type: 'table',
+              headers: ['直接疑問', '間接疑問', 'ちがい'],
+              rows: [
+                ['Where is the shop?', 'I don\'t know where the shop is.', '語順が「主語＋動詞」になる。'],
+                ['When do you open?', 'Tell me when you open.', 'do を使わず原形のまま。'],
+                ['What do you sell?', 'I know what you sell.', '疑問詞は文の途中に置く。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '形のポイント',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '疑問詞で始まる節を、know / tell me などのうしろに置く。',
+                '節の中は「主語＋動詞」の語順（do / does は使わない）。',
+                '文末の語順が動詞で終わるので、? はつかないことが多い。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（迷って）' },
+            { type: 'example', en: "I don't know where the shop is.", ja: 'お店がどこにあるか知りません。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（教えて）' },
+            { type: 'example', en: 'Tell me when you open.', ja: 'いつ開くか教えてください。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（わかってる）' },
+            { type: 'example', en: 'I know what you sell.', ja: 'あなたが何を売っているか知っています。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '間接疑問文は know / tell me などのうしろに疑問詞節を置く。',
+                '節の中は「主語＋動詞」の語順（do は使わない）。',
+                '「どこか・いつか・何か」を文の一部にする。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「お店がどこにあるか知りません」を英訳すると？',
+              choices: ["I don't know where is the shop.", "I don't know where the shop is.", "Where is the shop I don't know.", "I don't know where the shop."],
+              answerIndex: 1,
+              explanation: '節の中は「主語＋動詞」の語順で where the shop is です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「いつ開くか教えてください」を英訳すると？',
+              choices: ['Tell me when do you open.', 'Tell me when you open.', 'When do you open tell me.', 'Tell me when opens you.'],
+              answerIndex: 1,
+              explanation: '間接疑問では do を使わず when you open とします。',
+            },
+            {
+              id: 'q3',
+              prompt: '間接疑問文の節の語順として正しいのは？',
+              choices: ['疑問詞 + do + 主語 + 動詞', '疑問詞 + 主語 + 動詞', '主語 + 疑問詞 + 動詞', 'do + 主語 + 動詞'],
+              answerIndex: 1,
+              explanation: '節の中は「主語＋動詞」の語順です。',
+            },
+            {
+              id: 'q4',
+              prompt: '「あなたが何を売っているか知っています」を英訳すると？',
+              choices: ['I know what you sell.', 'I know what do you sell.', 'I know you sell what.', 'What you sell I know.'],
+              answerIndex: 0,
+              explanation: 'what で始まる節を know のうしろに置き、語順は what you sell です。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
