@@ -566,6 +566,120 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-plural-noun',
+        slug: 'plural-noun',
+        title: '名詞の複数形',
+        summary: '「一つ」から「たくさん」へ。ドーナツが山のようになるときのルール。',
+        rewardId: 'reward-plural-noun',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '名詞の複数形は「2つ以上あること」を示す形です。ドーナツが1個なら a donut、山のように並べば donuts。この「ふえるときのルール」をおぼえましょう。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: 'ほとんどの名詞は語尾に -s をつけるだけですが、言葉の終わり方によって -es や -ies になることがあります。変化のルールを見てみましょう。',
+            },
+            {
+              type: 'heading',
+              text: '変化のルール',
+              level: 2,
+            },
+            {
+              type: 'table',
+              headers: ['ルール', 'つけるもの', '例', '使い方'],
+              rows: [
+                ['基本', '-s', 'donut → donuts', 'ほとんどの名詞はこれ。'],
+                ['s, x, ch, sh で終わる', '-es', 'box → boxes / dish → dishes', '語尾をそのまま言うと言いにくいので -es。'],
+                ['「子音字 + y」で終わる', 'y を i にして -es', 'city → cities / cherry → cherries', 'y のまえが子音のとき。'],
+                ['「母音字 + y」で終わる', '-s', 'day → days / boy → boys', 'y のまえが母音ならそのまま -s。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'We make donuts. のように、2つ以上のものを数える。',
+                'Three boxes of donuts. のように、箱なども複数にする。',
+                'Two cherries on top. のように、y で終わる語は -ies をチェック。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（棚いっぱい）' },
+            { type: 'example', en: 'I see many donuts.', ja: 'たくさんのドーナツが見えます。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（箱を指して）' },
+            { type: 'example', en: 'We sell three boxes.', ja: 'わたしたちは箱を3つ売ります。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（トッピング）' },
+            { type: 'example', en: 'Two cherries on a donut.', ja: 'ドーナツの上にさくらんぼが2つ。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '基本は -s：donut → donuts。',
+                's/x/ch/sh で終わる語は -es：box → boxes。',
+                '「子音 + y」は y を i にして -ies：city → cities。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: 'donut の複数形は？',
+              choices: ['donut', 'donuts', 'donutes', 'donuties'],
+              answerIndex: 1,
+              explanation: '基本の名詞は -s をつけて donuts です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'box の複数形は？',
+              choices: ['boxs', 'boxes', 'boxies', 'boxen'],
+              answerIndex: 1,
+              explanation: 's で終わる語は -es をつけて boxes です。',
+            },
+            {
+              id: 'q3',
+              prompt: 'city の複数形は？',
+              choices: ['citys', 'cities', 'citis', 'cityes'],
+              answerIndex: 1,
+              explanation: '「子音 + y」は y を i にして -ies：cities です。',
+            },
+            {
+              id: 'q4',
+              prompt: 'day の複数形は？',
+              choices: ['days', 'dais', 'dayes', 'dies'],
+              answerIndex: 0,
+              explanation: '「母音 + y」はそのまま -s：days です。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

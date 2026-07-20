@@ -40,6 +40,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '助動詞の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-plural-noun',
+    name: '複数形ドーナツ',
+    icon: logo,
+    description: '名詞の複数形の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {
