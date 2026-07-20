@@ -70,6 +70,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '過去形(不規則変化)の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-there',
+    name: 'There構文ドーナツ',
+    icon: logo,
+    description: 'There構文の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {

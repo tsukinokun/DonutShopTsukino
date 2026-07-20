@@ -1142,6 +1142,113 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-there',
+        slug: 'there-be',
+        title: 'There構文',
+        summary: '「〜があります・います」を表す、There is / There are の形。',
+        rewardId: 'reward-there',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: 'There構文は「（そこに）〜があります・います」を表す形です。ドーナツ屋の棚に「ドーナツが3つあるよ」と伝えるときに使います。主語の前に There が出てくるのが特徴です。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: 'There構文は「There + be動詞 + 名詞」で作ります。be動詞は、うしろの名詞が単数なら is、複数なら are になります。まずは形の一覧を見てみましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['形', '使うとき', '例'],
+              rows: [
+                ['There is', '名詞が単数（または不可算）', 'There is a donut.'],
+                ['There are', '名詞が複数', 'There are three donuts.'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'There is a donut on the plate. のように、ありか・存在を伝える。',
+                'There are many boxes. のように、複数の存在を伝える。',
+                '疑問文は Is there...? / Are there...?、否定は There is not (isn\'t) / are not (aren\'t)。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（棚を指して）' },
+            { type: 'example', en: 'There is a donut.', ja: 'ドーナツが1つあります。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（山盛りで）' },
+            { type: 'example', en: 'There are many donuts.', ja: 'ドーナツがたくさんあります。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（箱を指して）' },
+            { type: 'example', en: 'There are three boxes.', ja: '箱が3つあります。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                'There構文は「There + be動詞 + 名詞」で存在を表す。',
+                '単数なら There is、複数なら There are。',
+                'うしろの名詞に合わせて be動詞を選ぶ。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「ドーナツが1つあります」を英訳すると？',
+              choices: ['There are a donut.', 'There is a donut.', 'There have a donut.', 'There has a donut.'],
+              answerIndex: 1,
+              explanation: '単数なので There is を使います。',
+            },
+            {
+              id: 'q2',
+              prompt: 'Three boxes ___ on the table. の空欄に入るのは？',
+              choices: ['There is', 'There are', 'There am', 'There be'],
+              answerIndex: 1,
+              explanation: '複数の boxes なので There are です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「ドーナツがたくさんあります」を英訳すると？',
+              choices: ['There is many donuts.', 'There are many donuts.', 'There has many donuts.', 'There have many donuts.'],
+              answerIndex: 1,
+              explanation: '複数なので There are を使います。',
+            },
+            {
+              id: 'q4',
+              prompt: 'There is a donut. の疑問文は？',
+              choices: ['Do there a donut?', 'Is there a donut?', 'Are there a donut?', 'There a donut is?'],
+              answerIndex: 1,
+              explanation: 'There構文の疑問文は is を文頭に出します。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];
