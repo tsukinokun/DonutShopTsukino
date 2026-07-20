@@ -899,6 +899,249 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-past-tense',
+        slug: 'past-tense',
+        title: '過去形(規則変化)',
+        summary: '「前は〜だった」「した」を表す、時間をふり返る形。規則変化の -ed にしぼって。',
+        rewardId: 'reward-past-tense',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '過去形(規則変化)は「もう終わったこと」「前の状態」を表します。ドーナツを昨日焼いたなら、I baked donuts。きちんとルールどおりに形を変える「規則変化」にしぼっておぼえましょう。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '過去形(規則変化)は動詞の形を決まったルールで過去に変えます。be動詞は was / were、一般動詞は -ed をつけるのがルールです。まずはbe動詞の過去形を見てみましょう。',
+            },
+            {
+              type: 'heading',
+              text: 'be動詞の過去形',
+              level: 2,
+            },
+            {
+              type: 'table',
+              headers: ['主語', '過去形', '例'],
+              rows: [
+                ['I / he / she / it', 'was', 'I was a baker.'],
+                ['you / we / they', 'were', 'They were happy.'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '一般動詞の過去形・規則変化（-ed）',
+              level: 2,
+            },
+            {
+              type: 'table',
+              headers: ['ルール', 'つけるもの', '例'],
+              rows: [
+                ['基本', '-ed', 'bake → baked'],
+                ['e で終わる', '-d', 'like → liked'],
+                ['「子音字 + y」で終わる', 'y を i にして -ed', 'study → studied'],
+                ['短い語（CVC）', '語末を重ねて -ed', 'shop → shopped'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'I baked donuts yesterday. のように、過去の行動を話す。',
+                'She was happy. のように、過去の状態を話す。',
+                '疑問・否定は did（動詞は原形に戻る）：Did you bake?',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（ふり返って）' },
+            { type: 'example', en: 'I baked donuts.', ja: 'わたしはドーナツを焼きました。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（昨夜の様子）' },
+            { type: 'example', en: 'She was happy.', ja: '彼女はうれしかったです。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（閉店後）' },
+            { type: 'example', en: 'We closed the shop.', ja: 'わたしたちは店を閉めました。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                'be動詞の過去形は was（単数） / were（複数）。',
+                '一般動詞の過去形（規則変化）は基本 -ed。',
+                '過去のこと・状態を表す。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「わたしは焼きました」を英訳すると？',
+              choices: ['I bake donuts.', 'I baking donuts.', 'I baked donuts.', 'I will bake donuts.'],
+              answerIndex: 2,
+              explanation: '過去形は baked です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'He ___ a teacher. （過去）の空欄に入るのは？',
+              choices: ['was', 'were', 'is', 'are'],
+              answerIndex: 0,
+              explanation: '三人称単数の過去形は was です。',
+            },
+            {
+              id: 'q3',
+              prompt: 'like の過去形は？',
+              choices: ['likeed', 'liked', 'liking', 'likes'],
+              answerIndex: 1,
+              explanation: 'e で終わる語は -d をつけて liked です。',
+            },
+            {
+              id: 'q4',
+              prompt: 'They were happy. を過去の疑問文にすると？',
+              choices: ['Do they were happy?', 'Were they happy?', 'Did they were happy?', 'Are they happy?'],
+              answerIndex: 1,
+              explanation: 'be動詞の疑問文は were を文頭に出します。',
+            },
+          ],
+        },
+      },
+      {
+        kind: 'article',
+        id: 'art-past-irregular',
+        slug: 'past-irregular',
+        title: '過去形(不規則変化)',
+        summary: 'ルールを守らない過去形。go→went、eat→ate のように変わる言葉。',
+        rewardId: 'reward-past-irregular',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '過去形(不規則変化)は、-ed をつけてもできない、ルールを守らない過去形です。ドーナツ屋でも「行った go→went」「食べた eat→ate」のように、ことばごとに形が変わります。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '不規則変化に決まったルールはありません。ひとつひとつ形をおぼえるしかないのが正直なところです。よく出るものを表でおぼえましょう。',
+            },
+            {
+              type: 'heading',
+              text: 'よく出る不規則変化',
+              level: 2,
+            },
+            {
+              type: 'table',
+              headers: ['原形', '過去形', '意味', '例'],
+              rows: [
+                ['go', 'went', '行く', 'I went to the shop.'],
+                ['eat', 'ate', '食べる', 'He ate a donut.'],
+                ['come', 'came', '来る', 'She came here.'],
+                ['buy', 'bought', '買う', 'We bought donuts.'],
+                ['make', 'made', '作る', 'They made donuts.'],
+                ['see', 'saw', '見る', 'I saw you.'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'I went to the shop. のように、過去の行動を話す。',
+                'He ate a donut. のように、不規則な過去形をそのまま使う。',
+                'be動詞の過去形 was / were も、この仲間としておぼえる。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（昨日の出来事）' },
+            { type: 'example', en: 'I went to the shop.', ja: 'わたしは店に行きました。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（お客さんの様子）' },
+            { type: 'example', en: 'He ate a donut.', ja: '彼はドーナツを食べました。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（仕込み）' },
+            { type: 'example', en: 'We made donuts.', ja: 'わたしたちはドーナツを作りました。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '不規則変化は -ed をつけず、形が変わる。',
+                'go→went / eat→ate / come→came をおぼえる。',
+                'be動詞の過去形 was / were も仲間。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: 'go の過去形は？',
+              choices: ['goed', 'went', 'gone', 'goes'],
+              answerIndex: 1,
+              explanation: 'go の過去形は went です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'eat の過去形は？',
+              choices: ['eated', 'ate', 'eaten', 'eats'],
+              answerIndex: 1,
+              explanation: 'eat の過去形は ate です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「わたしはドーナツを買いました」を英訳すると？',
+              choices: ['I bought donuts.', 'I buyed donuts.', 'I buy donuts.', 'I buying donuts.'],
+              answerIndex: 0,
+              explanation: 'buy の過去形は bought です。',
+            },
+            {
+              id: 'q4',
+              prompt: 'make の過去形は？',
+              choices: ['maked', 'made', 'maken', 'makes'],
+              answerIndex: 1,
+              explanation: 'make の過去形は made です。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

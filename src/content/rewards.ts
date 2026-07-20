@@ -58,6 +58,18 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '現在進行形の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-past-tense',
+    name: '過去形ドーナツ',
+    icon: logo,
+    description: '過去形の確認テストで手に入る、まあるいドーナツ。',
+  },
+  {
+    id: 'reward-past-irregular',
+    name: '不規則変化ドーナツ',
+    icon: logo,
+    description: '過去形(不規則変化)の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {
