@@ -27,17 +27,26 @@ if (-not (Test-Path -LiteralPath 'dist/index.html')) {
 # 3. SPA fallback
 Copy-Item -LiteralPath 'dist/index.html' -Destination 'dist/404.html' -Force
 
+# 3.5 Backup deploy files so they survive cleanup
+if (Test-Path -LiteralPath '_temp_deploy') { Remove-Item -Recurse -Force '_temp_deploy' }
+New-Item -ItemType Directory -LiteralPath '_temp_deploy' | Out-Null
+Copy-Item -LiteralPath 'deploy.bat' -Destination '_temp_deploy/deploy.bat' -Force
+Copy-Item -LiteralPath 'deploy.ps1' -Destination '_temp_deploy/deploy.ps1' -Force
+
 # 4. Deploy dist to gh-pages branch
 Write-Host '=== Pushing dist to gh-pages... ==='
 git branch -D gh-pages 2>$null
 git checkout --orphan gh-pages
 
-# dist の中身をルートへコピー
-if (Test-Path -LiteralPath '_temp_deploy') { Remove-Item -Recurse -Force '_temp_deploy' }
-New-Item -ItemType Directory -LiteralPath '_temp_deploy' | Out-Null
-Copy-Item -LiteralPath 'dist/*' -Destination '_temp_deploy/' -Recurse -Force
-Remove-Item -Recurse -Force ./*
-Copy-Item -LiteralPath '_temp_deploy/*' -Destination './' -Recurse -Force
+# clean working tree (keep .git)
+Get-ChildItem -Force | Where-Object { $_.Name -ne '.git' } | Remove-Item -Recurse -Force
+
+# dist の中身をルートへ
+Copy-Item -LiteralPath 'dist/*' -Destination './' -Recurse -Force
+
+# restore deploy files
+Copy-Item -LiteralPath '_temp_deploy/deploy.bat' -Destination './deploy.bat' -Force
+Copy-Item -LiteralPath '_temp_deploy/deploy.ps1' -Destination './deploy.ps1' -Force
 Remove-Item -Recurse -Force '_temp_deploy'
 
 git add -A
