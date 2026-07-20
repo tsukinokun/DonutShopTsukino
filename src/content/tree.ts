@@ -1789,6 +1789,120 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-comparative-superlative',
+        slug: 'comparative-superlative',
+        title: '比較級・最上級',
+        summary: '「より〜」「いちばん〜」を表す、er/est と more/most のルール。',
+        rewardId: 'reward-comparative-superlative',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '比較級・最上級は、物の大きさや甘さを比べるときの形です。ドーナツが「もっと大きい」「いちばん甘い」と並べるときに使います。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '2つを比べて「より〜」は比較級、3つ以上で「いちばん〜」は最上級です。短い語は -er / -est をつけ、長い語は more / most を使います。まずは形のルールを見てみましょう。',
+            },
+            {
+              type: 'heading',
+              text: '形のルール',
+              level: 2,
+            },
+            {
+              type: 'table',
+              headers: ['種類', 'つくり方', '例', '使い方'],
+              rows: [
+                ['比較級（短い語）', '語尾に -er', 'sweet → sweeter', '2つを比べる。'],
+                ['最上級（短い語）', '語尾に -est', 'sweet → sweetest', '3つ以上でいちばん。'],
+                ['比較級（長い語）', 'more + 原形', 'more delicious', '2つを比べる。'],
+                ['最上級（長い語）', 'most + 原形', 'most delicious', '3つ以上でいちばん。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: 'こんなときに使います',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                'This donut is sweeter. のように、2つを比べる（比較級）。',
+                'This is the sweetest donut. のように、いちばんを言う（最上級、the をつける）。',
+                'than を使って比べる相手を明示：sweeter than that one.',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（比べて）' },
+            { type: 'example', en: 'This donut is sweeter.', ja: 'このドーナツはより甘いです。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（いちばん）' },
+            { type: 'example', en: 'This is the sweetest donut.', ja: 'これはいちばん甘いドーナツです。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（上手）' },
+            { type: 'example', en: 'She is more careful.', ja: '彼女のほうがより丁寧です。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '比較級は「より〜」、最上級は「いちばん〜」。',
+                '短い語は -er / -est、長い語は more / most。',
+                '最上級には the をつける。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「より甘い」を英訳すると？',
+              choices: ['sweet', 'sweeter', 'sweetest', 'more sweet'],
+              answerIndex: 1,
+              explanation: '短い語の比較級は -er をつけて sweeter です。',
+            },
+            {
+              id: 'q2',
+              prompt: '「いちばん甘いドーナツ」を英訳すると？',
+              choices: ['a sweetest donut', 'the sweetest donut', 'more sweet donut', 'sweeter donut'],
+              answerIndex: 1,
+              explanation: '最上級には the をつけて the sweetest donut です。',
+            },
+            {
+              id: 'q3',
+              prompt: '「よりおいしい（delicious）」を英訳すると？',
+              choices: ['deliciouser', 'deliciousest', 'more delicious', 'most delicious'],
+              answerIndex: 2,
+              explanation: '長い語の比較級は more + 原形 で more delicious です。',
+            },
+            {
+              id: 'q4',
+              prompt: '「あれより甘い」を表す語は？',
+              choices: ['than that one', 'that one', 'the that one', 'as that one'],
+              answerIndex: 0,
+              explanation: '比べる相手は than を使って示します。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

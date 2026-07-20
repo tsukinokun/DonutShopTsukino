@@ -106,6 +106,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: '動名詞の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-comparative-superlative',
+    name: '比較級・最上級ドーナツ',
+    icon: logo,
+    description: '比較級・最上級の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {
