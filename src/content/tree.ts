@@ -1249,6 +1249,113 @@ export const contentTree: ContentNode[] = [
           ],
         },
       },
+      {
+        kind: 'article',
+        id: 'art-past-progressive',
+        slug: 'past-progressive',
+        title: '過去進行形',
+        summary: '「そのときちょうどやっていた」を表す、was / were + 動詞ing の形。',
+        rewardId: 'reward-past-progressive',
+        sections: {
+          intro: [
+            {
+              type: 'text',
+              text: '過去進行形は「過去のあるとき、ちょうどその最中にやっていた」ことを表します。ドーナツを焼いている最中にお客さんが来たなら、I was baking。過去の「いま」を写真に撮るような形です。',
+            },
+          ],
+          concept: [
+            {
+              type: 'text',
+              text: '過去進行形は「be動詞の過去形（was / were）+ 動詞の -ing 形」で作ります。be動詞が過去になるだけで、うしろの動詞はいつも -ing です。まずは形の一覧を見てみましょう。',
+            },
+            {
+              type: 'table',
+              headers: ['主語', '形', '例', '使い方'],
+              rows: [
+                ['I / he / she / it', 'was + -ing', 'I was baking.', '単数が過去にやっていた。'],
+                ['you / we / they', 'were + -ing', 'They were waiting.', '複数が過去にやっていた。'],
+              ],
+            },
+            {
+              type: 'heading',
+              text: '現在進行形とのちがい',
+              level: 2,
+            },
+            {
+              type: 'list',
+              items: [
+                '現在進行形は am / is / are + -ing（今やっている）。',
+                '過去進行形は was / were + -ing（過去のそのときやっていた）。',
+                '動詞の -ing のつけ方は同じルール（bake → baking など）。',
+              ],
+            },
+          ],
+          examples: [
+            {
+              type: 'text',
+              text: '声に出して読んでみましょう。🔊 を押すと発音が聞けます。',
+            },
+            { type: 'text', text: 'つきの（オーブン前）' },
+            { type: 'example', en: 'I was baking donuts.', ja: 'わたしはそのときドーナツを焼いていました。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（客席で）' },
+            { type: 'example', en: 'She was eating a donut.', ja: '彼女はそのときドーナツを食べていました。', speakable: true, speaker: 'tsukino' },
+            { type: 'text', text: 'つきの（行列を見て）' },
+            { type: 'example', en: 'They were waiting outside.', ja: '彼らはそのとき外で待っていました。', speakable: true, speaker: 'tsukino' },
+          ],
+          quiz: [
+            {
+              type: 'text',
+              text: 'それでは確認テストです。全問正解で金、半分以上で銀、1問正解で銅のドーナツがもらえます。',
+            },
+          ],
+          summary: [
+            {
+              type: 'text',
+              text: 'この記事でおぼえたことを、項目ごとにおさらいしましょう。',
+            },
+            {
+              type: 'list',
+              items: [
+                '過去進行形は「was / were + 動詞の -ing 形」。',
+                'be動詞が過去（was / were）になるのが現在進行形とのちがい。',
+                '「過去のそのときちょうどやっていた」を表す。',
+              ],
+            },
+          ],
+        },
+        quiz: {
+          questions: [
+            {
+              id: 'q1',
+              prompt: '「わたしはそのとき焼いていました」を英訳すると？',
+              choices: ['I bake donuts.', 'I was baking donuts.', 'I baked donuts.', 'I am baking donuts.'],
+              answerIndex: 1,
+              explanation: '過去進行形は was + baking です。',
+            },
+            {
+              id: 'q2',
+              prompt: 'She ___ a donut. （過去進行形）の空欄に入るのは？',
+              choices: ['was eating', 'were eating', 'is eating', 'ate'],
+              answerIndex: 0,
+              explanation: '三人称単数は was + eating です。',
+            },
+            {
+              id: 'q3',
+              prompt: 'They were ___ outside. の空欄に入るのは？',
+              choices: ['wait', 'waits', 'waiting', 'waited'],
+              answerIndex: 2,
+              explanation: '複数の They は were + waiting です。',
+            },
+            {
+              id: 'q4',
+              prompt: '過去進行形の be動詞として正しいのは？',
+              choices: ['am / is', 'was / were', 'is / are', 'be'],
+              answerIndex: 1,
+              explanation: '過去進行形は was / were を使います。',
+            },
+          ],
+        },
+      },
     ],
   },
 ];

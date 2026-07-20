@@ -76,6 +76,12 @@ export const rewards: RewardDef[] = [
     icon: logo,
     description: 'There構文の確認テストで手に入る、まあるいドーナツ。',
   },
+  {
+    id: 'reward-past-progressive',
+    name: '過去進行形ドーナツ',
+    icon: logo,
+    description: '過去進行形の確認テストで手に入る、まあるいドーナツ。',
+  },
 ];
 
 export function getReward(id: string): RewardDef | undefined {
