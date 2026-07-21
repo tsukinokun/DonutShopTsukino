@@ -37,6 +37,17 @@ export const Header = () => {
           <div className="site-header__menu-divider" />
           <p className="site-header__menu-heading">記事一覧</p>
           <ArticleTree nodes={contentTree} variant="compact" onNavigate={close} />
+          <div className="site-header__menu-divider" />
+          <p className="site-header__menu-heading">作者紹介</p>
+          <a
+            className="site-header__menu-primary"
+            href="https://tsukinokun.github.io/Tsukino-Night-Lab/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={close}
+          >
+            Tsukino Night Lab
+          </a>
         </nav>
       )}
     </header>

@@ -2,6 +2,7 @@
   "name": "donutshoptsukino",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://tsukinokun.github.io/DonutShopTsukino",
   "type": "module",
   "scripts": {
     "dev": "vite",

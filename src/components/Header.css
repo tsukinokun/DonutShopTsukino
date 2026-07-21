@@ -75,18 +75,4 @@
   padding: 0 12px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .site-header {
-    background-color: #1f2028;
-    border-bottom-color: #3a2f3a;
-  }
 
-  .site-header__menu {
-    background-color: #1f2028;
-    border-color: #3a2f3a;
-  }
-
-  .site-header__menu-divider {
-    background: #3a2f3a;
-  }
-}
